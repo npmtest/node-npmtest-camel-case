@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-camel-case/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-camel-case/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-camel-case/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-camel-case/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-camel-case/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-camel-case/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-camel-case/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-camel-case/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-camel-case/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-camel-case/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-camel-case/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-camel-case/build/coverage.html/index.html)
 
@@ -35,26 +35,35 @@
 ```json
 
 {
-    "name": "camel-case",
-    "version": "3.0.0",
+    "author": {
+        "name": "Blake Embrey",
+        "url": "http://blakeembrey.me"
+    },
+    "bugs": {
+        "url": "https://github.com/blakeembrey/camel-case/issues"
+    },
+    "dependencies": {
+        "no-case": "^2.2.0",
+        "upper-case": "^1.1.1"
+    },
     "description": "Camel case a string",
-    "main": "camel-case.js",
-    "typings": "camel-case.d.ts",
+    "devDependencies": {
+        "istanbul": "^0.4.3",
+        "mocha": "^2.2.1",
+        "standard": "^7.1.2"
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "ca3c3688a4e9cf3a4cda777dc4dcbc713249cf73",
+        "tarball": "https://registry.npmjs.org/camel-case/-/camel-case-3.0.0.tgz"
+    },
     "files": [
         "camel-case.js",
         "camel-case.d.ts",
         "LICENSE"
     ],
-    "scripts": {
-        "lint": "standard",
-        "test-spec": "mocha -- -R spec --bail",
-        "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
-        "test": "npm run lint && npm run test-cov"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/blakeembrey/camel-case.git"
-    },
+    "gitHead": "719ebc39a5bf828f794db64bb1a78c8dd8fef133",
+    "homepage": "https://github.com/blakeembrey/camel-case",
     "keywords": [
         "camel",
         "case",
@@ -70,24 +79,28 @@
         "text",
         "convert"
     ],
-    "author": {
-        "name": "Blake Embrey",
-        "url": "http://blakeembrey.me"
-    },
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/blakeembrey/camel-case/issues"
+    "main": "camel-case.js",
+    "maintainers": [
+        {
+            "name": "blakeembrey"
+        }
+    ],
+    "name": "camel-case",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/blakeembrey/camel-case.git"
     },
-    "homepage": "https://github.com/blakeembrey/camel-case",
-    "devDependencies": {
-        "istanbul": "^0.4.3",
-        "mocha": "^2.2.1",
-        "standard": "^7.1.2"
+    "scripts": {
+        "lint": "standard",
+        "test": "npm run lint && npm run test-cov",
+        "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
+        "test-spec": "mocha -- -R spec --bail"
     },
-    "dependencies": {
-        "no-case": "^2.2.0",
-        "upper-case": "^1.1.1"
-    }
+    "typings": "camel-case.d.ts",
+    "version": "3.0.0",
+    "bin": {}
 }
 ```
 
